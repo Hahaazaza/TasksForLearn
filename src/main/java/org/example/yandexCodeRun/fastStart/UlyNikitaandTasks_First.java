@@ -14,8 +14,13 @@ public class UlyNikitaandTasks_First {
             writer.write(String.valueOf(A + B));
             writer.newLine();
 
-            reader.close();
-            writer.close();
+            // reader.close();
+            // writer.close();
+            /*
+            Эти close тут не нужны, блок try автоматически закрывает
+            и не дает тратить системные ресурсы. Также предотвращает утечки в памяти,
+            и в целом чище.
+            */
         }
     }
 }
